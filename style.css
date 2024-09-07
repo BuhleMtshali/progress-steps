@@ -2,11 +2,11 @@
   --bg-color: #e0e1dd;
   --circles-color: #c1121f;
   --font-color: #0d1b2a;
+  --bar-empty-color: #e0e1dd;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg-color);
   text-align: center;
 }
 h1 {
@@ -18,10 +18,34 @@ h1 {
 .progress-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   max-width: 100%;
   width: 300px;
   margin: 0 auto;
+  position: relative;
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 100%;
+  z-index: -1;
+}
+.progress {
+  background-color: var(--circles-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50);
+  height: 5px;
+  width: 0;
+  z-index: -1;
+  transition: 0.4s ease;
 }
 button {
   margin: 20px;
@@ -35,8 +59,7 @@ button {
   cursor: pointer;
   background-color: var(--circles-color);
 }
-button:hover {
-  background-color: var(--bg-color);
-  transition: 0.3s ease-in;
-  color: var(--circles-color);
+
+button:disabled {
+  cursor: not-allowed;
 }
