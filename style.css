@@ -6,5 +6,37 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: var(--bg-color);
+  background-color: var(--bg-color);
+  text-align: center;
+}
+h1 {
+  color: var(--circles-color);
+}
+.container {
+  text-align: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  width: 300px;
+  margin: 0 auto;
+}
+button {
+  margin: 20px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--circles-color);
+}
+button:hover {
+  background-color: var(--bg-color);
+  transition: 0.3s ease-in;
+  color: var(--circles-color);
 }
