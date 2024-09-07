@@ -1,0 +1,10 @@
+:root {
+  --bg-color: #e0e1dd;
+  --circles-color: #c1121f;
+  --font-color: #0d1b2a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--bg-color);
+}
