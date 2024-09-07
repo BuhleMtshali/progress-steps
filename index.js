@@ -1,7 +1,7 @@
 const progressBar = document.getElementById("progress");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
-const circles = document.querySelectorAll("circle");
+const circles = document.querySelectorAll(".circle");
 
 let currentActive = 1;
 
@@ -10,6 +10,7 @@ nextBtn.addEventListener("click", () => {
   if (currentActive > circles.length) {
     currentActive = circles.length;
   }
+  update();
 });
 
 prevBtn.addEventListener("click", () => {
@@ -17,6 +18,7 @@ prevBtn.addEventListener("click", () => {
   if (currentActive < 1) {
     currentActive = 1;
   }
+  update();
 });
 
 function update() {
@@ -39,6 +41,6 @@ function update() {
     nextBtn.disabled = true;
   } else {
     prevBtn.disabled = false;
-    nextBtn.disabled = true;
+    nextBtn.disabled = false;
   }
 }
